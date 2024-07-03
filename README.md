@@ -1,7 +1,7 @@
 # Portfolio_Webapp
 #### Video Demo:  <URL HERE>
 #### Description:  
-This project is a svelte web app hosted on GitHub Pages. Initially, I was just going to make this project simply using vanilla HTML, CSS, and JavaScript. I decided against this because I wanted to learn a new webframework. The content of the pages took surprisingly little time when compared with getting all of the components to function as expected and  deciding on styling.
+This project is a svelte web app hosted on GitHub Pages. Initially, I was just going to make this project simply using vanilla HTML, CSS, and JavaScript. I decided against this because I wanted to learn a new webframework. The content of the pages took surprisingly little time when compared with getting all of the components to function as expected and  deciding on styling. I was having a lot of problems with file deletion due to attempting to deploy from the main branch, which were resolved by deploying to a separate branch (gh-pages).
 TODO
 Pages I made
 home.svelte
