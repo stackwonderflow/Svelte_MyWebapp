@@ -1,7 +1,7 @@
 # Svelte_MyWebapp
 #### Video Demo:  <URL HERE>
 #### Description:  
-This project is a svelte web app hosted on GitHub Pages. Initially, I was just going to make this project simply using vanilla HTML, CSS, and JavaScript. I decided against this because I wanted to learn a new webframework. The content of the pages took surprisingly little time when compared with getting all of the components to function as expected and deploy. I was having a lot of problems with file deletion due to attempting to deploy from the main branch, which were resolved by deploying to a separate branch (gh-pages). I also spent a lot of time attempting to host my web app at a custom domain.
+This project is a svelte web app hosted on GitHub Pages. Initially, I was just going to make this project simply using vanilla HTML, CSS, and JavaScript. I decided against this because I wanted to learn a new webframework. The content of the pages took surprisingly little time when compared with getting all of the components to function as expected and deploy. I was having a lot of problems with file deletion due to attempting to deploy from the main branch, which were resolved by deploying to a separate branch (gh-pages). While dealing with this, I created and deleted multiple project repositories locally and on my GitHub. I also spent a lot of time attempting to host my web app at a custom domain.
 
 Any files I do not include below are files that come included with the svelte project during initial setup. If I do not mention them, assume that I did not need to alter them in any way.
 
@@ -26,13 +26,13 @@ This is the base svelte page that holds the functionality for the svelte web app
 This is one of the pages that hosts web app content. It is the homepage that a visitor to the site is initially  directed to. On this page, I briefly introduce myself and have links to my LinkedIn and GitHub.
 
 ##### aboutme.svelte
-This page contains more web app content. I list some of my interests here and have another link that directs to my LinkedIn.
+This is another one of the pages that hosts web app content. I list some of my interests here and have another link that directs to my LinkedIn.
 
 ##### projects.svelte
-This page holds more web app content. It has several sections on coding projects that I have previously worked on.
+This is also another one of the pages that hosts web app content. It has several sections on coding projects that I have previously worked on. I include links to the projects on GitHub and elsewhere.
 
 ##### resume.svelte
-This page is the last that contains web app content visible to users who visit the site. It hosts most of my professional and educational experience to this point. I will attempt to keep this up to date going forward, but I make no promises.
+This is the last page that contains web app content visible to users who visit the site. It hosts most of my professional and educational experience to this point. I will attempt to keep this up to date going forward, but I make no promises.
 
 ##### CNAME
 This page hold the custom url for my web app. It is hosted using porkbun and is linked to another site.
