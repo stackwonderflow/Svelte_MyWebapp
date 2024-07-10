@@ -14,5 +14,5 @@
 
 <div>
 	<h1>Hello, Homepage</h1>
-	<p>Hello! My name is Alexandra Blair Allard and this is my website. I've been casually studying computer science and programming for some time, please feel free to connect with me on <a href="https://www.linkedin.com/in/aallard1/">LinkedIn</a> or check out my coding projects on <a href="https://github.com/stackwonderflow">GitHub</a>.</p>
+	<p>Hello! My name is Alexandra B Allard and this is my website. I've been casually studying computer science and programming for some time, please feel free to connect with me on <a href="https://www.linkedin.com/in/aallard1/">LinkedIn</a> or check out my coding projects on <a href="https://github.com/stackwonderflow">GitHub</a>.</p>
 </div>
