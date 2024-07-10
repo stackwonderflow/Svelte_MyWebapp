@@ -1,6 +1,6 @@
 <!--resume.svelte-->
 <script>
-    import 'global.css';
+    import '../public/global.css';
 </script>
 
 <svelte:head>
