@@ -16,6 +16,9 @@ This is another file that comes prebuilt with any Svelte project setup with Node
 ##### build folder
 This folder contains the build files (bundle.css, bundle.js, bundle.js.map). Build files are made whenever the 'npm run build' command is run as part of the predeployment. I do not directly edit these and they are changed whenever the project is re-deployed to display changes as I update the project.
 
+##### rollup.config.js
+This is another file that comes prebuilt with any Svelte project setup with Node.js. I had to add a couple lines to fix an unresolved dependency after adding my own styling to global.css.
+
 ##### node_modules folder
 This folder contains a lot of sub-folders with packages that make the Svelte app function as expected. It was added during initial project setup with Node.js. I did not alter anything within these files. I'm only mentioning it because it may still contain duplicate files due to problems I encountered while attempting to deploy. This should not cause any problems at this point.
 
