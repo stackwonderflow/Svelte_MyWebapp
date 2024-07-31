@@ -3,6 +3,7 @@
 	import Aboutme from "./aboutme.svelte";
 	import Projects from "./projects.svelte";
 	import Resume from "./resume.svelte";
+	import Recommend from "./recommend.svelte";
 
 	let currentPage = "Home";
 
@@ -18,6 +19,7 @@
 	<li><a href="#/aboutme" on:click="{() => navigate('Aboutme')}">About Me</a></li>
 	<li><a href="#/projects" on:click="{() => navigate('Projects')}">Projects</a></li>
 	<li><a href="#/resume" on:click="{() => navigate('Resume')}">Resume</a></li>
+	<li><a href="#/recommend" on:click="{() => navigate('Recommend')}">Recommend</a></li>
 </nav>
 
 <main>
@@ -29,5 +31,7 @@
 		<Projects />
 	{:else if currentPage === "Resume"}
 		<Resume />
+	{:else if currentPage === "Recommend"}
+		<Recommend />
 	{/if}
 </main>
