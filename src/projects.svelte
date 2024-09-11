@@ -4,20 +4,87 @@
 </script>
 
 <svelte:head>
-	<meta charset='utf-8'>
-	<meta name='viewport' content='width=device-width,initial-scale=1'>
-
-	<title>ABA's Projects</title>
-
-	<link rel='icon' type='image/png' href='/favicon.png'>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width,initial-scale=1'>
+    <title>ABA's Projects</title>
+    <link rel='icon' type='image/png' href='/favicon.png'>
 </svelte:head>
 
-<div>
+<div class="projects-container">
     <h1>Projects</h1>
-    <h2>Undergroundv2</h2>
-    <p>This was my initial idea for a final project for CS50. It is the second version of Underground, a console based game written in Python that I initially made for Code In Place 2021. I thought that I would improve upon it and make it into a flask based web app. But in the end, I decided that this used too much of my old work and I was spending too much time on it. This new version is better than the original, and has some bug fixes that escaped my notice in the original. <br> <a href="https://github.com/stackwonderflow/Undergroundv2">Undergroundv2</a></p>
-    <h2>ConsoleArcade</h2>
-    <p>This is a project I worked on with a friend (it can be found on their github page, I am only a contributor) for coding practice. It is a series of console based games written in Python. It includes hangman, tic-tac-toe, and several other simple games with ASCII visuals. <br> <a href="https://github.com/eantablin/ConsoleArcade">Console Arcade</a></p>
-    <h2>Underground</h2>
-    <p>This is my final project for Code In Place 2021, which was the first coding course I took part in live with other students. It is a console based game written in Python. It is a simple adventure game where the player fights progressively stronger enemies until they run out of health and die. It is the first coding project I made that I was truly proud of. <br> <a href="https://codeinplace-2021.netlify.app/2021/showcase/">Project Showcase</a> <br> <a href="https://codeinplace-2021.netlify.app/2021/showcase/1340">My Project</a> <br> <a href="https://github.com/stackwonderflow/Underground">Underground</a></p>
+    <div class="project-grid">
+        <div class="project-card">
+            <h2>Undergroundv2</h2>
+            <p>An improved version of my original console-based game, Underground. This Flask-based web app represents my growth as a developer and includes various bug fixes and enhancements.</p>
+            <a href="https://github.com/stackwonderflow/Undergroundv2" target="_blank" rel="noopener noreferrer" class="project-link">View on GitHub</a>
+        </div>
+        <div class="project-card">
+            <h2>ConsoleArcade</h2>
+            <p>A collaborative project featuring a series of console-based games written in Python. Includes popular games like hangman and tic-tac-toe, enhanced with ASCII visuals.</p>
+            <a href="https://github.com/eantablin/ConsoleArcade" target="_blank" rel="noopener noreferrer" class="project-link">View on GitHub</a>
+        </div>
+        <div class="project-card">
+            <h2>Underground</h2>
+            <p>My first major coding project, created as the final project for Code In Place 2021. A console-based adventure game where players face progressively stronger enemies.</p>
+            <div class="project-links">
+                <a href="https://codeinplace-2021.netlify.app/2021/showcase/1340" target="_blank" rel="noopener noreferrer" class="project-link">View Showcase</a>
+                <a href="https://github.com/stackwonderflow/Underground" target="_blank" rel="noopener noreferrer" class="project-link">View on GitHub</a>
+            </div>
+        </div>
+    </div>
 </div>
+
+<style>
+    .projects-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .project-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+    }
+
+    .project-card {
+        background-color: rgba(255, 255, 255, 0.05);
+        border-radius: 8px;
+        padding: 20px;
+        transition: transform 0.3s ease;
+    }
+
+    .project-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .project-card h2 {
+        margin-top: 0;
+        color: #4da6ff;
+    }
+
+    .project-links {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 15px;
+    }
+
+    .project-link {
+        display: inline-block;
+        background-color: #4da6ff;
+        color: white;
+        padding: 8px 15px;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+
+    .project-link:hover {
+        background-color: #3385ff;
+    }
+</style>

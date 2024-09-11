@@ -15,11 +15,13 @@
 
 <!--Implemented nav bar with help from Chat GPT-->
 <nav>
-	<li><a href="#/" on:click="{() => navigate('Home')}">Home</a></li>
-	<li><a href="#/aboutme" on:click="{() => navigate('Aboutme')}">About Me</a></li>
-	<li><a href="#/projects" on:click="{() => navigate('Projects')}">Projects</a></li>
-	<li><a href="#/resume" on:click="{() => navigate('Resume')}">Resume</a></li>
-	<li><a href="#/recommend" on:click="{() => navigate('Recommend')}">Recommend</a></li>
+    <ul>
+        <li><a href="#/" class:active={currentPage === 'Home'} on:click="{() => navigate('Home')}">Home</a></li>
+        <li><a href="#/aboutme" class:active={currentPage === 'Aboutme'} on:click="{() => navigate('Aboutme')}">About Me</a></li>
+        <li><a href="#/projects" class:active={currentPage === 'Projects'} on:click="{() => navigate('Projects')}">Projects</a></li>
+        <li><a href="#/recommend" class:active={currentPage === 'Recommend'} on:click="{() => navigate('Recommend')}">Recommend</a></li>
+		<li><a href="#/resume" class:active={currentPage === 'Resume'} on:click="{() => navigate('Resume')}">Resume</a></li>
+    </ul>
 </nav>
 
 <main>
@@ -29,9 +31,19 @@
 		<Aboutme />
 	{:else if currentPage === "Projects"}
 		<Projects />
-	{:else if currentPage === "Resume"}
-		<Resume />
 	{:else if currentPage === "Recommend"}
 		<Recommend />
+	{:else if currentPage === "Resume"}
+		<Resume />
 	{/if}
 </main>
+
+<style>
+    nav {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .active {
+        border-bottom: 2px solid #4da6ff;
+    }
+</style>
