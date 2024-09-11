@@ -121,6 +121,20 @@
     </section>
 
     <section>
+        <h2>Additional Education</h2>
+        <div class="resume-item">
+            <h3>CS50 2024</h3>
+            <p>Harvard University, Cambridge, MA 2024</p>
+            <p>CS50 is Harvard's introductory computer science course, offered online. It guides students through several coding languages and tools, including Scratch, C, Python, SQL, HTML, CSS, JavaScript, and Flask. The class culminates in a final project of the student's choice, allowing them to demonstrate their learning and explore new languages and technologies.</p>
+        </div>
+        <div class="resume-item">
+            <h3>Code In Place 2021</h3>
+            <p>Stanford University, Stanford, CA 2021</p>
+            <p>Code In Place is a 5-week online introductory Python course based on material from the first half of Stanford’s introductory programming course, CS106A. The class culminates in a final project where students demonstrate their newly acquired skills. Final projects are showcased online.</p>
+        </div>
+    </section>
+
+    <section>
         <h2>Posters</h2>
         <div class="resume-item">
             <h3>Takenaka Lab</h3>
@@ -172,19 +186,6 @@
         </div>
     </section>
 
-    <section>
-        <h2>Additional Education</h2>
-        <div class="resume-item">
-            <h3>CS50 2024</h3>
-            <p>Harvard University, Cambridge, MA 2024</p>
-            <p>CS50 is Harvard's introductory computer science course, offered online. It guides students through several coding languages and tools, including Scratch, C, Python, SQL, HTML, CSS, JavaScript, and Flask. The class culminates in a final project of the student's choice, allowing them to demonstrate their learning and explore new languages and technologies.</p>
-        </div>
-        <div class="resume-item">
-            <h3>Code In Place 2021</h3>
-            <p>Stanford University, Stanford, CA 2021</p>
-            <p>Code In Place is a 5-week online introductory Python course based on material from the first half of Stanford’s introductory programming course, CS106A. The class culminates in a final project where students demonstrate their newly acquired skills. Final projects are showcased online.</p>
-        </div>
-    </section>
     <!-- Add other sections following a similar structure -->
 
 </div>
