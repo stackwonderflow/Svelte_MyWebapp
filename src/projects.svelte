@@ -14,6 +14,11 @@
     <h1>Projects</h1>
     <div class="project-grid">
         <div class="project-card">
+            <h2>OSRS Shooting Star Tracker</h2>
+            <p>An in-progress collaborative project featuring a scraper for Old School Runescape (OSRS). Plan to make a plugin integration for RuneLite.</p>
+            <a href="https://github.com/stackwonderflow/osrs_shooting_star_tracker" target="_blank" rel="noopener noreferrer" class="project-link">View on GitHub</a>
+        </div>
+        <div class="project-card">
             <h2>Undergroundv2</h2>
             <p>An improved version of my original console-based game, Underground. This Flask-based web app represents my growth as a developer and includes various bug fixes and enhancements.</p>
             <a href="https://github.com/stackwonderflow/Undergroundv2" target="_blank" rel="noopener noreferrer" class="project-link">View on GitHub</a>

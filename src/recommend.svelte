@@ -17,7 +17,7 @@
     <section>
         <h2>Products I Highly Recommend</h2>
         <div class="recommendation-grid">
-            {#each [{name: 'Vessi', link: 'https://vessi.com/'}, {name: 'Lume', link: 'https://lumedeodorant.com/'}, {name: 'Hairstory', link: 'https://hairstory.com/'}, {name: 'Ridge', link: 'https://ridge.com/'}, {name: 'SugarBunnyShop', link: 'https://www.sugarbunnyshop.com'}] as product}
+            {#each [{name: 'Vessi', link: 'https://vessi.com/'}, {name: 'Lume', link: 'https://lumedeodorant.com/'}, {name: 'Hairstory', link: 'https://hairstory.com/'}, {name: 'Ridge', link: 'https://ridge.com/'}, {name: 'Sundays', link: 'https://sundaysfordogs.com/'}, {name: 'SugarBunnyShop', link: 'https://www.sugarbunnyshop.com'}] as product}
                 <div class="recommendation-card">
                     <h3>{product.name}</h3>
                     <a href={product.link} target="_blank" rel="noopener noreferrer" class="recommendation-link">Visit Website</a>
@@ -29,7 +29,7 @@
     <section>
         <h2>Media Recommendations</h2>
         <div class="recommendation-grid">
-            {#each [{name: 'Dropout', link: 'https://www.dropout.tv/'}, {name: 'Fool & Scholar Productions', link: 'https://foolandscholar.com/'}, {name: 'The NoSleep Podcast', link: 'https://www.thenosleeppodcast.com/'}, {name: 'Rusty Quill', link: 'https://rustyquill.com/'}, {name: 'The Philip DeFranco Show', link: 'https://www.youtube.com/@PhilipDeFranco'}] as media}
+            {#each [{name: 'Dropout', link: 'https://www.dropout.tv/'}, {name: 'Not Another D&D Podcast', link: 'https://naddpod.com/'},{name: 'Fool & Scholar Productions', link: 'https://foolandscholar.com/'}, {name: 'The NoSleep Podcast', link: 'https://www.thenosleeppodcast.com/'}, {name: 'Rusty Quill', link: 'https://rustyquill.com/'}, {name: 'The Philip DeFranco Show', link: 'https://www.youtube.com/@PhilipDeFranco'}] as media}
                 <div class="recommendation-card">
                     <h3>{media.name}</h3>
                     {#if media.link}
