@@ -17,7 +17,7 @@
         <h2>Education</h2>
         <div class="resume-item">
             <h3>Florida Institute of Technology (FIT), Melbourne, FL</h3>
-            <p>B.S., Biochemistry (Chemistry Focus), 2017-2018</p>
+            <p>B.S., Biochemistry - Chemistry Focus, 2017-2018</p>
         </div>
         <div class="resume-item">
             <h3>Eastern Florida State College (EFSC), Melbourne, FL</h3>
@@ -36,6 +36,7 @@
                     <li>SQL</li>
                     <li>HTML</li>
                     <li>CSS</li>
+                    <li>R</li>
                 </ul>
             </div>
             <div class="skill-category">

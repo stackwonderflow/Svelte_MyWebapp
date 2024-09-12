@@ -13,7 +13,7 @@
 <div class="about-container">
     <h1>About Me</h1>
     <div class="about-content">
-        <p>I'm a multifaceted individual with a passion for technology and a zest for life. My interests span a wide range of activities, including:</p>
+        <p>My interests span a wide range of activities, including:</p>
         <ul>
             <li>Hiking and exploring nature</li>
             <li>Swimming</li>
