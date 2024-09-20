@@ -15,7 +15,7 @@
     <p class="disclaimer">Note: These recommendations are not sponsored. I'm sharing products and media that I personally use and enjoy.</p>
     
     <section>
-        <h2>Products I Highly Recommend</h2>
+        <h2>Product Recommendations</h2>
         <div class="recommendation-grid">
             {#each [{name: 'Vessi', link: 'https://vessi.com/'}, {name: 'Lume', link: 'https://lumedeodorant.com/'}, {name: 'Hairstory', link: 'https://hairstory.com/'}, {name: 'Ridge', link: 'https://ridge.com/'}, {name: 'Sundays', link: 'https://sundaysfordogs.com/'}, {name: 'SugarBunnyShop', link: 'https://www.sugarbunnyshop.com'}] as product}
                 <div class="recommendation-card">
