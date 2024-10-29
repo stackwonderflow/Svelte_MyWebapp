@@ -12,6 +12,12 @@
 
 <div class="resume-container">
     <h1>Resume</h1>
+
+    <section class="profile">
+        <div class="resume-item">
+            <p class="profile-text">Junior Software Engineer with a unique background in biochemistry and laboratory sciences. Combining analytical thinking from scientific research with modern software development practices to deliver efficient solutions.</p>
+        </div>
+    </section>
     
     <section>
         <h2>Education</h2>
@@ -29,21 +35,21 @@
         <h2>Skills</h2>
         <div class="skills-grid">
             <div class="skill-category">
-                <h3>Programming Languages</h3>
+                <h3>Programming & Web</h3>
                 <ul>
-                    <li>Python</li>
-                    <li>C</li>
+                    <li><span class="skill-highlight">Python</span></li>
+                    <li><span class="skill-highlight">C</span></li>
                     <li>SQL</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
+                    <li>HTML/CSS</li>
                     <li>R</li>
+                    <li>Flask</li>
+                    <li>Svelte</li>
                 </ul>
             </div>
             <div class="skill-category">
-                <h3>Programming Tools</h3>
+                <h3>Tools & Databases</h3>
                 <ul>
-                    <li>Git</li>
-                    <li>Github</li>
+                    <li>Git/Github</li>
                     <li>VSCode</li>
                     <li>PostgreSQL</li>
                     <li>SQLite3</li>
@@ -195,53 +201,130 @@
     .resume-container {
         max-width: 800px;
         margin: 0 auto;
-        padding: 40px 20px;
+        /* Responsive padding */
+        padding: clamp(20px, 5vw, 40px) clamp(15px, 3vw, 20px);
     }
 
     h1, h2 {
         text-align: center;
-        margin-bottom: 30px;
+        margin-bottom: clamp(20px, 4vw, 30px);
     }
 
+    h1 { font-size: clamp(1.8rem, 4vw, 2.5rem); }
+    h2 { font-size: clamp(1.4rem, 3vw, 1.8rem); }
+    h3 { font-size: clamp(1.1rem, 2.5vw, 1.3rem); }    
+
     section {
-        margin-bottom: 40px;
+        margin-bottom: clamp(30px, 5vw, 40px);
     }
 
     .resume-item {
         background-color: rgba(255, 255, 255, 0.05);
         border-radius: 8px;
-        padding: 20px;
-        margin-bottom: 20px;
+        /* Responsive padding */
+        padding: clamp(15px, 3vw, 20px);
+        margin-bottom: clamp(15px, 3vw, 20px);
+        transition: transform 0.2s ease-in-out;
+        /* Ensure content doesn't overflow */
+        word-wrap: break-word;
     }
+
+    .resume-item:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
     .resume-item h3 {
         color: #4da6ff;
         margin-top: 0;
+        margin-bottom: clamp(8px, 2vw, 12px);
     }
 
     .skills-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 20px;
+        /* Responsive grid */
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+        gap: clamp(15px, 3vw, 20px);
     }
 
     .skill-category {
         background-color: rgba(255, 255, 255, 0.05);
         border-radius: 8px;
-        padding: 15px;
+        /* Responsive padding */
+        padding: clamp(12px, 2.5vw, 15px);
     }
 
     .skill-category h3 {
         color: #4da6ff;
         margin-top: 0;
+        margin-bottom: clamp(8px, 2vw, 10px);
     }
 
     ul {
         list-style-type: none;
         padding-left: 0;
+        /* Add margin for better spacing */
+        margin: 0.5em 0;
     }
 
     li {
-        margin-bottom: 5px;
+        margin-bottom: clamp(4px, 1.5vw, 5px);
+        line-height: 1.4;
+        /* Add padding for better touch targets */
+        padding: 2px 0;
+    }
+
+    /* Mobile optimizations */
+    @media (max-width: 480px) {
+        .resume-item {
+            /* Disable hover effect on mobile */
+            transform: none !important;
+        }
+
+        .resume-item:hover {
+            box-shadow: none;
+        }
+
+        /* Improve list readability */
+        li {
+            padding: 4px 0;
+        }
+
+        /* Adjust job descriptions */
+        .resume-item ul {
+            padding-left: 10px;
+        }
+
+        /* Make dates more visible */
+        .resume-item > p:nth-child(2) {
+            font-size: 0.9em;
+            color: #888;
+            margin: 5px 0;
+        }
+    }
+
+    /* Touch device optimizations */
+    @media (hover: none) {
+        .resume-item:hover {
+            transform: none;
+            box-shadow: none;
+        }
+    }
+
+    /* Print styles */
+    @media print {
+        .resume-container {
+            padding: 0;
+        }
+
+        .resume-item, .skill-category {
+            break-inside: avoid;
+            background-color: transparent;
+            box-shadow: none;
+        }
+
+        h1, h2, h3 {
+            color: #000;
+        }
     }
 </style>

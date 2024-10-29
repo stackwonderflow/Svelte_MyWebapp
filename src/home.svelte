@@ -25,37 +25,85 @@
     .home-container {
         max-width: 600px;
         margin: 0 auto;
-        padding: 40px 20px;
+        /* Responsive padding */
+        padding: clamp(20px, 5vw, 40px) clamp(15px, 3vw, 20px);
         text-align: center;
     }
 
     h1 {
-        font-size: 2.5em;
-        margin-bottom: 20px;
+        /* Responsive font size */
+        font-size: clamp(1.8em, 5vw, 2.5em);
+        margin-bottom: clamp(15px, 4vw, 20px);
+        /* Prevent awkward text wrapping */
+        word-wrap: break-word;
     }
 
     p {
-        margin-bottom: 20px;
+        margin-bottom: clamp(15px, 4vw, 20px);
+        /* Improve readability */
+        font-size: clamp(1rem, 2.5vw, 1.1rem);
+        line-height: 1.6;
     }
 
     .cta-buttons {
         display: flex;
         justify-content: center;
-        gap: 20px;
-        margin-top: 30px;
+        gap: clamp(10px, 3vw, 20px);
+        margin-top: clamp(20px, 4vw, 30px);
+        /* Allow wrapping on small screens */
+        flex-wrap: wrap;
     }
 
     .cta-button {
         display: inline-block;
-        padding: 10px 20px;
+        /* Responsive padding */
+        padding: clamp(8px, 2vw, 10px) clamp(15px, 3vw, 20px);
         background-color: #4da6ff;
         color: white;
         border-radius: 5px;
         text-decoration: none;
         transition: background-color 0.3s ease;
+        /* Improve touch target size */
+        min-height: 44px;
+        /* Center text vertically */
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
-
+    
     .cta-button:hover {
         background-color: #3385ff;
     }
+
+    /* Mobile optimizations */
+    @media (max-width: 480px) {
+        .cta-button {
+            /* Make buttons full width on very small screens */
+            width: 100%;
+            margin: 0;
+        }
+
+        .cta-buttons {
+            /* Increase gap for stacked buttons */
+            gap: 15px;
+            /* Remove horizontal margin */
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+
+    /* Touch device optimizations */
+    @media (hover: none) {
+        .cta-button:hover {
+            /* Disable hover effect on touch devices */
+            background-color: #4da6ff;
+        }
+        
+        /* Add active state for touch feedback */
+        .cta-button:active {
+            background-color: #3385ff;
+            transform: scale(0.98);
+        }
+    }
+
 </style>

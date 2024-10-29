@@ -31,38 +31,74 @@
     .about-container {
         max-width: 800px;
         margin: 0 auto;
-        padding: 40px 20px;
+        /* Responsive padding */
+        padding: clamp(20px, 5vw, 40px) clamp(15px, 3vw, 20px);
     }
 
     .about-content {
         background-color: rgba(255, 255, 255, 0.05);
         border-radius: 8px;
-        padding: 20px;
-        margin-top: 20px;
+        /* Responsive padding */
+        padding: clamp(15px, 3vw, 20px);
+        margin-top: clamp(15px, 3vw, 20px);
+        /* Ensure content doesn't overflow */
+        word-wrap: break-word;
     }
 
     h1 {
         text-align: center;
-        margin-bottom: 30px;
+        margin-bottom: clamp(20px, 4vw, 30px);
+        /* Responsive font size */
+        font-size: clamp(1.8rem, 4vw, 2.5rem);
     }
 
     ul {
         list-style-type: none;
         padding-left: 0;
+        /* Add some spacing between list and paragraphs */
+        margin: clamp(10px, 2vw, 15px) 0;
     }
 
     li {
-        margin-bottom: 10px;
+        margin-bottom: clamp(8px, 2vw, 10px);
         position: relative;
-        padding-left: 25px;
+        /* Responsive padding for bullet points */
+        padding-left: clamp(20px, 4vw, 25px);
+        /* Improve readability */
+        line-height: 1.5;
     }
 
     li:before {
         content: "•";
         color: #4da6ff;
-        font-size: 1.5em;
+        /* Responsive bullet size */
+        font-size: clamp(1.3em, 3vw, 1.5em);
         position: absolute;
         left: 0;
-        top: -5px;
+        /* Adjust bullet position */
+        top: clamp(-4px, -1vw, -5px);
+    }
+
+    /* Mobile optimizations */
+    @media (max-width: 480px) {
+        li {
+            /* Increase spacing between items on mobile */
+            margin-bottom: 12px;
+        }
+
+        .about-content {
+            /* Improve text readability on mobile */
+            font-size: clamp(0.95rem, 2.5vw, 1rem);
+            line-height: 1.6;
+        }
+    }
+
+    /* High-DPI screen optimizations */
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        .about-content {
+            /* Sharper text rendering on high-DPI screens */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
     }
 </style>

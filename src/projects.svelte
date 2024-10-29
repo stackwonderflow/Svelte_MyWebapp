@@ -43,25 +43,31 @@
     .projects-container {
         max-width: 1200px;
         margin: 0 auto;
-        padding: 40px 20px;
+        /* Responsive padding */
+        padding: clamp(20px, 5vw, 40px) clamp(15px, 3vw, 20px);
     }
 
     h1 {
         text-align: center;
-        margin-bottom: 30px;
+        margin-bottom: clamp(20px, 4vw, 30px);
+        font-size: clamp(1.8rem, 4vw, 2.5rem);
     }
 
     .project-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 20px;
+        /* Adjust minimum card width for smaller screens */
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+        gap: clamp(15px, 3vw, 20px);
     }
 
     .project-card {
         background-color: rgba(255, 255, 255, 0.05);
         border-radius: 8px;
-        padding: 20px;
+        /* Responsive padding */
+        padding: clamp(15px, 3vw, 20px);
         transition: transform 0.3s ease;
+        /* Ensure content doesn't overflow */
+        word-wrap: break-word;
     }
 
     .project-card:hover {
@@ -71,25 +77,72 @@
     .project-card h2 {
         margin-top: 0;
         color: #4da6ff;
+        /* Responsive heading size */
+        font-size: clamp(1.3rem, 3vw, 1.5rem);
+        margin-bottom: clamp(10px, 2vw, 15px);
     }
 
     .project-links {
         display: flex;
         justify-content: space-between;
-        margin-top: 15px;
+        margin-top: clamp(12px, 3vw, 15px);
+        /* Allow wrapping on small screens */
+        flex-wrap: wrap;
+        gap: 10px;
     }
 
     .project-link {
         display: inline-block;
         background-color: #4da6ff;
         color: white;
-        padding: 8px 15px;
+        /* Responsive padding */
+        padding: clamp(8px, 2vw, 10px) clamp(12px, 3vw, 15px);
         border-radius: 5px;
         text-decoration: none;
         transition: background-color 0.3s ease;
+        /* Improve touch target size */
+        min-height: 44px;
+        /* Ensure text doesn't wrap awkwardly */
+        white-space: nowrap;
     }
 
     .project-link:hover {
         background-color: #3385ff;
+    }
+
+    /* Mobile optimizations */
+    @media (max-width: 480px) {
+        .project-card {
+            /* Disable hover effect on mobile */
+            transform: none !important;
+        }
+
+        .project-links {
+            /* Stack links on mobile */
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .project-link {
+            /* Make links full width on mobile */
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    /* Touch device optimizations */
+    @media (hover: none) {
+        .project-card:hover {
+            transform: none;
+        }
+
+        .project-link:hover {
+            background-color: #4da6ff;
+        }
+
+        .project-link:active {
+            background-color: #3385ff;
+            transform: scale(0.98);
+        }
     }
 </style>
