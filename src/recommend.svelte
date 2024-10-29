@@ -47,36 +47,54 @@
     .recommendations-container {
         max-width: 1200px;
         margin: 0 auto;
-        padding: 40px 20px;
+        /* Responsive padding */
+        padding: clamp(20px, 5vw, 40px) clamp(15px, 3vw, 20px);
     }
 
     h1, h2 {
         text-align: center;
-        margin-bottom: 30px;
+        margin-bottom: clamp(20px, 4vw, 30px);
     }
+
+    h1 { font-size: clamp(1.8rem, 4vw, 2.5rem); }
+    h2 { font-size: clamp(1.4rem, 3vw, 1.8rem); }
 
     .disclaimer {
         text-align: center;
         font-style: italic;
-        margin-bottom: 30px;
+        margin-bottom: clamp(20px, 4vw, 30px);
+        /* Improve readability */
+        font-size: clamp(0.9rem, 2vw, 1rem);
+        line-height: 1.6;
+        /* Add padding for better text container */
+        padding: 0 clamp(10px, 3vw, 20px);
     }
 
     section {
-        margin-bottom: 50px;
+        margin-bottom: clamp(30px, 6vw, 50px);
     }
 
     .recommendation-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
+        /* Adjust minimum card width for smaller screens */
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+        gap: clamp(15px, 3vw, 20px);
     }
 
     .recommendation-card {
         background-color: rgba(255, 255, 255, 0.05);
         border-radius: 8px;
-        padding: 20px;
+        /* Responsive padding */
+        padding: clamp(15px, 3vw, 20px);
         text-align: center;
         transition: transform 0.3s ease;
+        /* Ensure content doesn't overflow */
+        word-wrap: break-word;
+    }
+
+    .recommendation-card h3 {
+        font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+        margin-bottom: clamp(10px, 2vw, 15px);
     }
 
     .recommendation-card:hover {
@@ -87,14 +105,53 @@
         display: inline-block;
         background-color: #4da6ff;
         color: white;
-        padding: 8px 15px;
+        /* Responsive padding */
+        padding: clamp(8px, 2vw, 10px) clamp(12px, 3vw, 15px);
         border-radius: 5px;
         text-decoration: none;
         transition: background-color 0.3s ease;
-        margin-top: 10px;
+        margin-top: clamp(8px, 2vw, 10px);
+        /* Improve touch target size */
+        min-height: 44px;
+        /* Center text vertically */
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .recommendation-link:hover {
         background-color: #3385ff;
+    }
+
+    /* Mobile optimizations */
+    @media (max-width: 480px) {
+        .recommendation-card {
+            /* Disable hover effect on mobile */
+            transform: none !important;
+        }
+
+        .recommendation-link {
+            /* Make links more prominent on mobile */
+            width: 100%;
+            max-width: 200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    /* Touch device optimizations */
+    @media (hover: none) {
+        .recommendation-card:hover {
+            transform: none;
+        }
+
+        .recommendation-link:hover {
+            background-color: #4da6ff;
+        }
+
+        .recommendation-link:active {
+            background-color: #3385ff;
+            transform: scale(0.98);
+        }
     }
 </style>
