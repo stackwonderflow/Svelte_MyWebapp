@@ -14,17 +14,57 @@
 </script>
 
 <!--Implemented nav bar with help from Chat GPT-->
-<nav>
-    <ul>
-        <li><a href="#/" class:active={currentPage === 'Home'} on:click="{() => navigate('Home')}">Home</a></li>
-        <li><a href="#/aboutme" class:active={currentPage === 'Aboutme'} on:click="{() => navigate('Aboutme')}">About Me</a></li>
-        <li><a href="#/projects" class:active={currentPage === 'Projects'} on:click="{() => navigate('Projects')}">Projects</a></li>
-        <li><a href="#/recommend" class:active={currentPage === 'Recommend'} on:click="{() => navigate('Recommend')}">Recommend</a></li>
-		<li><a href="#/resume" class:active={currentPage === 'Resume'} on:click="{() => navigate('Resume')}">Resume</a></li>
+<nav aria-label="Main navigation">
+    <ul role="menubar">
+        <li role="none">
+            <a href="#/" 
+               role="menuitem" 
+               class:active={currentPage === 'Home'} 
+               on:click="{() => navigate('Home')}"
+               aria-current={currentPage === 'Home' ? 'page' : undefined}>
+                Home
+            </a>
+        </li>
+        <li role="none">
+            <a href="#/aboutme" 
+               role="menuitem" 
+               class:active={currentPage === 'Aboutme'} 
+               on:click="{() => navigate('Aboutme')}"
+               aria-current={currentPage === 'Aboutme' ? 'page' : undefined}>
+                About Me
+            </a>
+        </li>
+        <li role="none">
+            <a href="#/projects" 
+               role="menuitem" 
+               class:active={currentPage === 'Projects'} 
+               on:click="{() => navigate('Projects')}"
+               aria-current={currentPage === 'Projects' ? 'page' : undefined}>
+                Projects
+            </a>
+        </li>
+        <li role="none">
+            <a href="#/recommend" 
+               role="menuitem" 
+               class:active={currentPage === 'Recommend'} 
+               on:click="{() => navigate('Recommend')}"
+               aria-current={currentPage === 'Recommend' ? 'page' : undefined}>
+                Recommend
+            </a>
+        </li>
+        <li role="none">
+            <a href="#/resume" 
+               role="menuitem" 
+               class:active={currentPage === 'Resume'} 
+               on:click="{() => navigate('Resume')}"
+               aria-current={currentPage === 'Resume' ? 'page' : undefined}>
+                Resume
+            </a>
+        </li>
     </ul>
 </nav>
 
-<main>
+<main id="main-content" aria-live="polite">
     {#if currentPage === "Home"}
         <Home />
 	{:else if currentPage === "Aboutme"}
@@ -69,5 +109,18 @@
             /* Make active state more visible on touch devices */
             background-color: rgba(77, 166, 255, 0.1);
         }
+    }
+
+    /* Add focus styles for keyboard navigation */
+    a:focus {
+        outline: 3px solid #4da6ff;
+        outline-offset: 2px;
+    }
+
+    /* Ensure sufficient color contrast for links */
+    a {
+        color: #ffffff;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
     }
 </style>

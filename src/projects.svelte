@@ -16,7 +16,7 @@
         <div class="project-card">
             <h2>OSRS Shooting Star Tracker</h2>
             <p>An in-progress collaborative project featuring a scraper for Old School Runescape (OSRS). Plan to make a plugin integration for RuneLite.</p>
-            <a href="https://github.com/stackwonderflow/osrs_shooting_star_tracker" target="_blank" rel="noopener noreferrer" class="project-link">View on GitHub</a>
+            <a href="https://github.com/stackwonderflow/osrs_shooting_star_tracker" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View OSRS Shooting Star Tracker on GitHub">View on GitHub</a>
         </div>
         <div class="project-card">
             <h2>Undergroundv2</h2>
@@ -143,6 +143,30 @@
         .project-link:active {
             background-color: #3385ff;
             transform: scale(0.98);
+        }
+    }
+
+    .project-card:focus {
+        outline: 2px solid #4da6ff;
+        outline-offset: 2px;
+        transform: translateY(-5px);
+    }
+
+    .project-link:focus {
+        outline: 2px solid white;
+        outline-offset: 2px;
+        background-color: #3385ff;
+    }
+
+    /* Update mobile optimizations */
+    @media (max-width: 480px) {
+        .project-card {
+            transform: none !important;
+        }
+        
+        .project-card:focus {
+            transform: none !important;
+            outline: 2px solid #4da6ff;
         }
     }
 </style>

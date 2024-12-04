@@ -20,7 +20,7 @@
             {#each [{name: 'Vessi', link: 'https://vessi.com/'}, {name: 'Lume', link: 'https://lumedeodorant.com/'}, {name: 'Hairstory', link: 'https://hairstory.com/'}, {name: 'Ridge', link: 'https://ridge.com/'}, {name: 'Sundays', link: 'https://sundaysfordogs.com/'}, {name: 'SugarBunnyShop', link: 'https://www.sugarbunnyshop.com'}] as product}
                 <div class="recommendation-card">
                     <h3>{product.name}</h3>
-                    <a href={product.link} target="_blank" rel="noopener noreferrer" class="recommendation-link">Visit Website</a>
+                    <a href={product.link} target="_blank" rel="noopener noreferrer" class="recommendation-link" tabindex="0">Visit Website</a>
                 </div>
             {/each}
         </div>
@@ -33,7 +33,7 @@
                 <div class="recommendation-card">
                     <h3>{media.name}</h3>
                     {#if media.link}
-                        <a href={media.link} target="_blank" rel="noopener noreferrer" class="recommendation-link">Visit Website</a>
+                        <a href={media.link} target="_blank" rel="noopener noreferrer" class="recommendation-link" tabindex="0">Visit Website</a>
                     {:else}
                         <p>Available on YouTube and most podcast platforms</p>
                     {/if}
@@ -153,5 +153,10 @@
             background-color: #3385ff;
             transform: scale(0.98);
         }
+    }
+
+    .recommendation-link:focus {
+        outline: 2px solid #3385ff;
+        outline-offset: 2px;
     }
 </style>

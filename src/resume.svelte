@@ -6,36 +6,37 @@
 <svelte:head>
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width,initial-scale=1'>
+    <meta name="description" content="Professional resume of ABA, featuring experience in software engineering and biochemistry">
     <title>ABA's Resume</title>
     <link rel='icon' type='image/png' href='/favicon.png'>
 </svelte:head>
 
-<div class="resume-container">
+<main class="resume-container">
     <h1>Resume</h1>
 
-    <section class="profile">
-        <div class="resume-item">
+    <section class="profile" aria-label="Profile">
+        <div class="resume-item" role="article">
             <p class="profile-text">Junior Software Engineer with a unique background in biochemistry and laboratory sciences. Combining analytical thinking from scientific research with modern software development practices to deliver efficient solutions.</p>
         </div>
     </section>
     
-    <section>
+    <section aria-label="Education">
         <h2>Education</h2>
-        <div class="resume-item">
+        <div class="resume-item" role="article">
             <h3>Florida Institute of Technology (FIT), Melbourne, FL</h3>
             <p>B.S., Biochemistry - Chemistry Focus, 2017-2018</p>
         </div>
-        <div class="resume-item">
+        <div class="resume-item" role="article">
             <h3>Eastern Florida State College (EFSC), Melbourne, FL</h3>
             <p>A.A., -2016</p>
         </div>
     </section>
 
-    <section>
+    <section aria-label="Skills">
         <h2>Skills</h2>
         <div class="skills-grid">
-            <div class="skill-category">
-                <h3>Programming & Web</h3>
+            <div class="skill-category" role="region" aria-labelledby="programming-heading">
+                <h3 id="programming-heading">Programming & Web</h3>
                 <ul>
                     <li><span class="skill-highlight">Python</span></li>
                     <li><span class="skill-highlight">C</span></li>
@@ -46,8 +47,8 @@
                     <li>Svelte</li>
                 </ul>
             </div>
-            <div class="skill-category">
-                <h3>Tools & Databases</h3>
+            <div class="skill-category" role="region" aria-labelledby="tools-heading">
+                <h3 id="tools-heading">Tools & Databases</h3>
                 <ul>
                     <li>Git/Github</li>
                     <li>VSCode</li>
@@ -55,8 +56,8 @@
                     <li>SQLite3</li>
                 </ul>
             </div>
-            <div class="skill-category">
-                <h3>Laboratory Skills & Equipment</h3>
+            <div class="skill-category" role="region" aria-labelledby="laboratory-skills-heading">
+                <h3 id="laboratory-skills-heading">Laboratory Skills & Equipment</h3>
                 <ul>
                     <li>FPLC</li>
                     <li>HPLC</li>
@@ -67,8 +68,8 @@
                     <li>SDS-PAGE</li>
                 </ul>
             </div>
-            <div class="skill-category">
-                <h3>Laboratory Techniques</h3>
+            <div class="skill-category" role="region" aria-labelledby="laboratory-techniques-heading">
+                <h3 id="laboratory-techniques-heading">Laboratory Techniques</h3>
                 <ul>
                     <li>Suspension cell culture</li>
                     <li>Bacterial transfection & transformation</li>
@@ -195,7 +196,7 @@
 
     <!-- Add other sections following a similar structure -->
 
-</div>
+</main>
 
 <style>
     .resume-container {
@@ -325,6 +326,22 @@
 
         h1, h2, h3 {
             color: #000;
+        }
+    }
+
+    .resume-item:focus-within {
+        outline: 2px solid #4da6ff;
+    }
+
+    /* Improve color contrast */
+    .resume-item h3 {
+        color: #66b3ff; /* Slightly lighter blue for better contrast */
+    }
+
+    /* Ensure sufficient text contrast */
+    @media (prefers-color-scheme: dark) {
+        .resume-item {
+            background-color: rgba(255, 255, 255, 0.08); /* Slightly darker for better contrast */
         }
     }
 </style>
